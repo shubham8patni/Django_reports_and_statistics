@@ -3,7 +3,7 @@ from products.models import Product
 from customers.models import Customer
 from profiles.models import Profile
 from django.utils import timezone
-from .utils import generate_code, calculate_total_price
+from .utils import generate_code
 # Create your models here.
 
 class Position(models.Model):
