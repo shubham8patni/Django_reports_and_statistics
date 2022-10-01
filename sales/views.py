@@ -27,13 +27,14 @@ def home_view(request):
                         'product' : pos.product.name,
                         'quantit' : pos.quantity,
                         "price" : pos.price,
+                        'sales_id' : pos.get_sales_id()
                     }
                     positions_data.append(obj)
 
             sales_df = sales_df.to_html
 
             positions_df = pd.DataFrame(positions_data)
-            positions_df = positions_df.to_html
+            positions_df = positions_df.to_html 
             print(positions_df)
             print("######################################")
         else:
